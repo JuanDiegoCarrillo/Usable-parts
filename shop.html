@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+    <title>Usable Parts</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="shop.css" />
+    <style>
+        .more-description {
+            display: none;
+        }
+        .toggle-button.show-less {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li class="dropdown" data-aos="fade-down">
+            <a href="index.html">Inicio</a>
+            <div class="dropdown-content"></div>
+        </li>
+        <li data-aos="fade-down"><a href="anuncios.html">Tutoriales</a></li>
+        <li data-aos="fade-down"><a href="shop.html">Tienda</a></li>
+        <li data-aos="fade-down"><a href="Contactos.html">Sobre Nosotros</a></li>
+	<li data-aos="fade-down"><a href="contactenos.html">Contactenos</a></li>
+        <li class="profile-menu">
+            <span class="user-icon" id="userIcon"></span>
+            <div id="profileDropdown" class="dropdown-content">
+                <a href="profile.html">Ver perfil</a>
+                <a href="#" id="logout">Cerrar sesión</a>
+            </div>
+        </li>
+        <li> 
+	<div class="container-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon-cart"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+          />
+        </svg>
+        <div class="count-products">
+          <span id="contador-productos">0</span>
+        </div>
+        <div class="container-cart-products hidden-cart">
+          <div class="cart-product"></div>
+          <div class="cart-total">
+            <h3>Total:</h3>
+            <span class="total-pagar">$0</span>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</ul>
+    <div class="background-container">
+        <div class="content-container" data-aos="zoom-in">
+            <p style="color: #161b22;">o</p>
+            <p style="color: #161b22;">o</p>
+            <p style="color: #161b22;">o</p>
+            <p style="color: #161b22;">o</p>
+            <p style="color: #161b22;">o</p>
+            <p style="color: #161b22;">o</p>
+            <div class="container-items">
+                <div class="item">
+                    <figure>
+                        <img
+                            src="Pantalla HONOR 10 LITE.png"
+                            alt="producto"
+                        />
+                    </figure>
+                    <div class="info-product">
+                        <h2 style="color: white">Pantalla HONOR 10 LITE </h2>>
+                        <p style="color: white">Precio</p>
+                        <p class="price" style="color: white">$100.000</p>
+                        <button>Añadir al carrito</button>
+                        <button><a href="metodo-pago.html"style="color: white; text-decoration: none;">Comprar</a></button>
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img
+                            src="batería motorola g3.png"
+                            alt="producto"
+                        />
+                    </figure>
+                    <div class="info-product">
+                        <h2 style="color: white">Batería motorola g3</h2>
+                        <p style="color: white">Precio</p>
+                        <p class="price" style="color: white">$50.000</p>
+                        <button>Añadir al carrito</button>
+                        <button><a href="metodo-pago.html"style="color: white; text-decoration: none;">Comprar</a></button>
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="bateria samsung.png" alt="producto" />
+                    </figure>
+                    <div class="info-product">
+                        <h2 style="color: white">Batería samsung s8</h2>
+                        <p style="color: white">Precio</p>
+                        <p class="price" style="color: white">$50.000</p>
+                        <button>Añadir al carrito</button>
+                        <button><a href="metodo-pago.html"style="color: white; text-decoration: none;">Comprar</a></button>
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img
+                            src="Pantalla SAMSUNG A30.png"
+                            alt="producto"
+                        />
+                    </figure>
+                    <div class="info-product">
+                        <h2 style="color: white">Pantalla SAMSUNG A30</h2>
+                        <p style="color: white">Precio</p>
+                        <p class="price" style="color: white">$100.000</p>
+                        <button>Añadir al carrito</button>
+                        <button><a href="metodo-pago.html"style="color: white; text-decoration: none;">Comprar</a></button>
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img
+                            src="pantalla tecno spark.png"
+                            alt="producto"
+                        />
+                    </figure>
+                    <div class="info-product">
+                        <h2 style="color: white">Pantalla TECNO SPARK GO 2023</h2>
+                        <p style="color: white">Precio</p>
+                        <p class="price" style="color: white">$100.000</p>
+                        <button>Añadir al carrito</button>
+                        <button><a href="metodo-pago.html"style="color: white; text-decoration: none;">Comprar</a></button>
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img
+                            src="Botones TECNO SPARK GO 2023.png"
+                            alt="producto"
+                        />
+                    </figure>
+                    <div class="info-product">
+                        <h2 style="color: white">Botones TECNO SPARK GO 2023</h2>
+                        <p style="color: white">Descripción:</p>
+                        <p style="color: white">Es un flex en donde se contienen los circuitos para que funcionen 
+                        los botones de volumen arriba (+) y volumen abajo (-) y volumen de encendido (power).</p>
+			<button class="toggle-button" onclick="toggleDescription(this)">Mostrar menos</button>
+                        <p style="color: white">Precio</p>
+                        <p class="price" style="color: white">$25.990</p>
+                        <button>Añadir al carrito</button>
+                        <button><a href="metodo-pago.html"style="color: white; text-decoration: none;">Comprar</a></button>
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <a href="BOTONES SAMSUNG A30.png">  <img
+                            src="BOTONES SAMSUNG A30.png"
+                            alt="producto" /></a>
+                    </figure>
+                    <div class="info-product">
+                        <h2 style="color: white">BOTONES SAMSUNG A30</h2>
+                        <p style="color: white">Descripción:</p>
+                        <p style="color: white">Es un flex en donde se contienen los circuitos para que funcionen 
+                        los botones de volumen arriba (+) y volumen abajo (-) y volumen de encendido (power).</p>
+			<button class="toggle-button" onclick="toggleDescription(this)">Mostrar menos</button>
+                        <p style="color: white">Precio</p>
+                        <p class="price" style="color: white">$25.990</p>
+                        <button>Añadir al carrito</button>
+                        <button><a href="metodo-pago.html"style="color: white; text-decoration: none;">Comprar</a></button>
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <a href="BOTONES HONOR 10 LITE.png"> <img
+                            src="BOTONES HONOR 10 LITE.png"
+                            alt="producto"
+                        /></a>
+                    </figure>
+                    <div class="info-product">
+                        <h2 style="color: white">BOTONES HONOR 10 LITE</h2>
+                        <p style="color: white">Descripción:</p>
+                        <p style="color: white">Es un flex en donde se contienen los circuitos para que funcionen 
+                        los botones de volumen arriba (+) y volumen abajo (-) y volumen de encendido (power).</p>
+			<button class="toggle-button" onclick="toggleDescription(this)">Mostrar menos</button>
+                        <p style="color: white">Precio</p>
+                        <p class="price" style="color: white">$25.990</p>
+                        <button>Añadir al carrito</button>
+                        <button><a href="metodo-pago.html"style="color: white; text-decoration: none;">Comprar</a></button>
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img
+                            src="KIT DE HERRAMIENTAS ESPECIALIZADO PARA ARREGLAR CELULARES..png"
+                            alt="producto"
+                        />
+                    </figure>
+                    <div class="info-product">
+                        <h2 style="color: white">KIT DE HERRAMIENTAS ESPECIALIZADO PARA ARREGLAR CELULARES.</h2>
+                        <p style="color: white">Descripción:</p>
+                        <p>Es un kit de herramientas que contiene:</p>
+                        <p class="short-description">
+                            * 2 (dos) uñas de guitarra<br>
+                            * 1 (una) pinza mediana<br>
+                            * 1 (un) mango con imán para los destornilladores (semi universal)<br>
+                            * 1 (un) mango con imán para los destornilladores circulares (semi universal)
+                        </p>
+			<button class="toggle-button" onclick="toggleDescription(this)">Mostrar menos</button>
+                        <p class="more-description">
+                            20 (veinte) destornilladores de metal (de pala, de estrella, estrella 6 puntas de tamaño pequeños y medianos)<br>
+                            * 8 (ocho) destornilladores de orificios anchos (medianos y pequeños)<br>
+                            * 1 (un) pin de expulsión de tarjetas SIM
+                        </p>
+                        <p style="color: white">Precio</p>
+                        <p class="price" style="color: white">$80.000</p>
+                        <button>Añadir al carrito</button>
+                        <button><a href="metodo-pago.html"style="color: white; text-decoration: none;">Comprar</a></button>
+                        
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img
+                            src="PEGANTE ESPECIALIZADO PARA LAS PANTALLAS DE LOS CELULARES T-8000..png"
+                            alt="producto"
+                        />
+                    </figure>
+                    <div class="info-product">
+                        <h2 style="color: white">PEGANTE ESPECIALIZADO PARA LAS PANTALLAS DE LOS CELULARES T-8000.</h2>
+                        <p style="color: white">Precio</p>
+                        <p class="price" style="color: white">$30.000</p>
+                        <button>Añadir al carrito</button>
+                        <button><a href="metodo-pago.html"style="color: white; text-decoration: none;">Comprar</a></button>
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img
+                            src="ALCOHOL ISOPROPILICO.PNG"
+                            alt="producto"
+                        />
+                    </figure>
+                    <div class="info-product">
+                        <h2 style="color: white">ALCOHOL ISOPROPILICO 500ML+Frasco</h2>
+                        <p style="color: white">Descripción:</p>
+                        <p style="color: white">Este es un alcohol: "mas concentrado, con respecto a sus diferentes derivaciones", es el indicado para el uso de reparación de celulares, ya que se evapora mas rápido sin riesgo alguno de dañar un celular (si no se vierte en grandes cantidades).</p>
+                        <button class="toggle-button" onclick="toggleDescription(this)">Mostrar menos</button>
+                        <p style="color: white">Precio</p>
+                        <p class="price" style="color: white">$30.000</p>
+                        <button>Añadir al carrito</button>
+                        <button><a href="metodo-pago.html"style="color: white; text-decoration: none;">Comprar</a></button>
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img
+                            src="Lamina Especial para destapar celulares.png"
+                            alt="producto"
+                        />
+                    </figure>
+                    <div class="info-product">
+                        <h2 style="color: white">LAMINA ESPECIAL PARA DESTAPAR CELULARES</h2>
+                        <p style="color: white">Descripción:</p>
+                        <p style="color: white">Es una lamina especial, cuyo objetivo es ayudar a destapar un celular y disminuir el riesgo de dañar el interior de este.</p>
+                        <button class="toggle-button" onclick="toggleDescription(this)">Mostrar menos</button>
+                        <p style="color: white">Precio</p>
+                        <p class="price" style="color: white">$15.000</p>
+                        <button>Añadir al carrito</button>
+                        <button><a href="metodo-pago.html"style="color: white; text-decoration: none;">Comprar</a></button>
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img
+                            src="PANTALLA XIAOMI REDMI NOTE 8.png"
+                            alt="producto"
+                        />
+                    </figure>
+                    <div class="info-product">
+                        <h2 style="color: white">PANTALLA XIAOMI REDMI NOTE 8</h2>
+                        <p style="color: white">Precio</p>
+                        <p class="price" style="color: white">$100.000</p>
+                        <button>Añadir al carrito</button>
+                        <button><a href="metodo-pago.html"style="color: white; text-decoration: none;">Comprar</a></button>
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img
+                            src="BATERIA Vivo Y31, Y52-s Y21.PNG"
+                            alt="producto"
+                        />
+                    </figure>
+                    <div class="info-product">
+                        <h2 style="color: white">BATERIA Vivo Y31, Y52-s Y21.</h2>
+                        <p style="color: white">Precio</p>
+                        <p class="price" style="color: white">$50.000</p>
+                        <button>Añadir al carrito</button>
+                        <button><a href="metodo-pago.html"style="color: white; text-decoration: none;">Comprar</a></button>
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img
+                            src="PANTALLA HONOR X7B.png"
+                            alt="producto"
+                        />
+                    </figure>
+                    <div class="info-product">
+                        <h2 style="color: white">PANTALLA HONOR X7B</h2>
+                        <p style="color: white">Precio</p>
+                        <p class="price" style="color: white">$100.000</p>
+                        <button>Añadir al carrito</button>
+                        <button><a href="metodo-pago.html"style="color: white; text-decoration: none;">Comprar</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="shop.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        function toggleDescription(button) {
+            const moreDescription = button.previousElementSibling;
+            if (moreDescription.style.display === "none") {
+                moreDescription.style.display = "block";
+                button.textContent = "Mostrar menos";
+                button.classList.add('show-less');
+            } else {
+                moreDescription.style.display = "none";
+                button.textContent = "Mostrar más";
+                button.classList.remove('show-less');
+            }
+        }
+
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        if (loggedInUser) {
+            const profilePic = localStorage.getItem(loggedInUser + '_profilePic');
+            if (profilePic) {
+                document.getElementById('userIcon').innerHTML = '<img src="' + profilePic + '" alt="Profile Image">';
+            } else {
+                document.getElementById('userIcon').innerHTML = '<img src="default-profile.png" alt="Default Profile Image">';
+            }
+        } else {
+            document.getElementsByClassName('profile-menu')[0].innerHTML = '<li><a href="login.html">Iniciar sesión</a></li><li><a href="register.html">Registrar</a></li>';
+        }
+
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <link rel="stylesheet" type="text/css" href="shop.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+    <title>Usable Parts</title>
+</head>
+<body>
+    <ul class="menu">
+        <li class="dropdown" data-aos="fade-down">
+            <a href="index.html">Inicio</a>
+            <div class="dropdown-content"></div>
+        </li>
+        <li data-aos="fade-down"><a href="anuncios.html">Tutoriales</a></li>
+        <li data-aos="fade-down"><a href="shop.html">Tienda</a></li>
+        <li data-aos="fade-down"><a href="Contactos.html">Sobre Nosotros</a></li>
+	<li data-aos="fade-down"><a href="contactenos.html">Contactenos</a></li>
+        <li class="profile-menu">
+            <span class="user-icon" id="userIcon"></span>
+            <div id="profileDropdown" class="dropdown-content">
+                <a href="profile.html">Ver perfil</a>
+                <a href="#" id="logout">Cerrar sesión</a>
+            </div>
+        </li>
+    </ul>
+    <div class="container-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon-cart"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+          />
+        </svg>
+        <div class="count-products">
+          <span id="contador-productos">0</span>
+        </div>
+        <div class="container-cart-products hidden-cart">
+          <div class="cart-product"></div>
+          <div class="cart-total">
+            <h3>Total:</h3>
+            <span class="total-pagar">$0</span>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</ul>
+
+    <div class="background-container">
+        <div class="content-container" data-aos="zoom-in">
+            
+            <p data-aos="fade-right">En esta </p>
+            <ul>
+                <li data-aos="fade-left">Reemplazo de pantalla y/o pacha del celular</li>
+
+            </ul>
+            <img src="imagen 1.png" alt="Imagen 1" width="200" height="200" data-aos="zoom-in">
+
+        </div>
+    </div>
+    <script src="shop.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        if (loggedInUser) {
+            const profilePic = localStorage.getItem(loggedInUser + '_profilePic');
+            if (profilePic) {
+                document.getElementById('userIcon').innerHTML = '<img src="' + profilePic + '" alt="Profile Image">';
+            } else {
+                document.getElementById('userIcon').innerHTML = '<img src="default-profile.png" alt="Default Profile Image">';
+            }
+        } else {
+            document.getElementsByClassName('profile-menu')[0].innerHTML = '<li><a href="login.html">Iniciar sesión</a></li><li><a href="register.html">Registrar</a></li>';
+        }
+
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>
