@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" type="text/css" href="shop.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usable Parts</title>
+    <style>
+        .service-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .service-item {
+            text-align: center;
+            max-width: 250px;
+        }
+
+        .service-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .service-item h3 {
+            color: white;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+    <li class="dropdown" data-aos="fade-down">
+        <a href="index.html">Inicio</a>
+        <div class="dropdown-content"></div>
+    </li>
+    <li data-aos="fade-down"><a href="anuncios.html">Tutoriales</a></li>
+    <li data-aos="fade-down"><a href="shop.html">Tienda</a></li>
+    <li data-aos="fade-down"><a href="Contactos.html">Sobre Nosotros</a></li>
+    <li data-aos="fade-down"><a href="contactenos.html">Contactenos</a></li>
+    <li class="profile-menu">
+        <span class="user-icon" id="userIcon"></span>
+        <div id="profileDropdown" class="dropdown-content">
+            <a href="profile.html">Ver perfil</a>
+            <a href="#" id="logout">Cerrar sesión</a>
+        </div>
+    </li>
+    <div class="container-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon-cart"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+          />
+        </svg>
+        <div class="count-products">
+          <span id="contador-productos">0</span>
+        </div>
+        <div class="container-cart-products hidden-cart">
+          <div class="cart-product"></div>
+          <div class="cart-total">
+            <h3>Total:</h3>
+            <span class="total-pagar">$0</span>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</ul>
+    
+    <div class="background-container">
+        <div class="content-container" data-aos="zoom-in">
+            <center><h1> USABLE PARTS</h1></center>
+            <center><img src="Logo.png" alt="Logo de la página" width="200" height="200"></center>
+            <center><h3 style="color: white;" data-aos="fade-right">Slogan: Ahorra y renueva, cuida el planeta</h3></center>
+            <center><h1>Misión</h1></center>
+            <p style="color: white;" data-aos="fade-right">Usable Parts se dedica a crear contenido audiovisual para brindar información sobre el mantenimiento y reparación de celulares, así incentivar a las personas a reparar un teléfono por si solas desde casa, para lograr mitigar la tasa de residuos electrónicos en Bogotá D.C.</p>
+            <center><h1>Visión</h1></center>
+            <p style="color: white;" data-aos="fade-left">Usable Parts para 2030 será un servicio reconocido que genera valor social, económico y ambiental sostenible, dentro del mercado de la reparación de dispositivos móviles a nivel nacional, hacia las personas de la clase media, de la mano con la gestión de modelos de negocio innovadores con los mejores colaboradores locales.</p>
+            <p style="color: #161b22;">o</p>
+            <center><h1>Descripción del producto:</h1></center>
+            <p style="color: white;" data-aos="fade-right">En esta página se podrán encontrar tutoriales para poder solucionar los diversos problemas técnicos que se encuentran en un celular; de estos se podrán observar:</p>
+            <p>.</p>
+            <div class="service-container">
+                <div class="service-item" data-aos="fade-left">
+                    <h3>Reemplazo de pantalla</h3>
+                    <p style="color: #161b22;">o</p>
+                    <img src="imagen 1.png" alt="Reemplazo de pantalla">
+                </div>
+                <div class="service-item" data-aos="fade-left">
+                    <h3>Cambio de batería</h3>
+                    <p style="color: #161b22;">o</p>
+                    <img src="imagen 2.png"  alt="Cambio de batería">
+                </div>
+                <div class="service-item" data-aos="fade-left">
+                    <h3>Reemplazo de botones</h3>
+                    <p style="color: #161b22;">o</p>
+                    <img src="Botones TECNO SPARK GO 2023.png" alt="Reemplazo de botones">
+                </div>
+            </div>
+
+            <p style="color: white;" data-aos="fade-right">A su vez se podrá encontrar un amplio catálogo para comprar los repuestos de los celulares, junto con el kit de herramientas para poder arreglar un celular, manejando un servicio eficiente y rápido.</p>
+            <center><img src="imagen 3.png" alt="Imagen 3" width="320" height="200" data-aos="flip-left"></center>
+            <p style="color: white;" data-aos="fade-left">Dado caso que su celular definitivamente no funcione, tendrá la opción de dejarlo con Usable Parts, manejamos campañas de recolección de celulares, para reciclarlos de la mejor manera para ayudar al medio ambiente y la demanda de residuos electrónicos de celulares.</p>
+            <center><img src="imagen 4.png" alt="Imagen 4" width="319" height="190" data-aos="flip-right"></center>
+            <center><img src="imagen 5.png" alt="Imagen 5" width="319" height="190" data-aos="flip-up"></center>
+            <p style="color: #161b22;">o</p>
+        <center><h1>Avatares de los integrantes</h1></center>
+        <center><img src="avatarjaid.jpeg" alt="Jaider Milquez" width="200" height="300" data-aos="fade-up"></center>
+        <center><p style="color: white;">Jaider Milquez</p></center>
+        <center><img src="avatarjuli.jpeg" alt="Yuliana Espinoza" width="200" height="300" data-aos="fade-up"></center>
+        <center><p style="color: white;">Yuliana Espinosa</p>
+        <center><img src="avatarjuan.png" alt="Juan Diego Carrillo" width="200" height="300" data-aos="fade-up"></center>
+        <center><p style="color: white;">Juan Diego Carrillo</p></center>
+        </div>
+    </div>
+    <script src="shop.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        if (loggedInUser) {
+            const profilePic = localStorage.getItem(loggedInUser + '_profilePic');
+            if (profilePic) {
+                document.getElementById('userIcon').innerHTML = '<img src="' + profilePic + '" alt="Profile Image">';
+            } else {
+                document.getElementById('userIcon').innerHTML = '<img src="default-profile.png" alt="Default Profile Image">';
+            }
+        } else {
+            document.getElementsByClassName('profile-menu')[0].innerHTML = '<li><a href="login.html">Iniciar sesión</a></li><li><a href="register.html">Registrar</a></li>';
+        }
+
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

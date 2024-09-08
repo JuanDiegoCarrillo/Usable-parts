@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <title>Perfil</title>
+</head>
+<body>
+    <h2>Perfil</h2>
+    <div id="profile-info">
+        <img id="profile-pic" src="" alt="Foto de perfil" style="width: 150px; height: 150px; display: none;">
+        <h3 id="username-display"></h3>
+    </div>
+    <form id="profileForm">
+        <label for="profilePicInput">Subir foto de perfil:</label>
+        <input type="file" id="profilePicInput" accept="image/*">
+        <br>
+        <button type="submit">Guardar</button>
+    </form>
+    <br>
+    <button onclick="window.location.href='index.html'">Ir a la página principal</button>
+
+    <script>
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        if (!loggedInUser) {
+            alert('Debes iniciar sesión para ver tu perfil.');
+            window.location.href = 'login.html';
+        } else {
+            document.getElementById('username-display').innerText = loggedInUser;
+
+            const profilePic = localStorage.getItem(loggedInUser + '_profilePic');
+            if (profilePic) {
+                document.getElementById('profile-pic').src = profilePic;
+                document.getElementById('profile-pic').style.display = 'block';
+            }
+        }
+
+        document.getElementById('profileForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById('profilePicInput');
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onloadend = function() {
+                    localStorage.setItem(loggedInUser + '_profilePic', reader.result);
+                    document.getElementById('profile-pic').src = reader.result;
+                    document.getElementById('profile-pic').style.display = 'block';
+                    alert('Foto de perfil actualizada.');
+                }
+                reader.readAsDataURL(file);
+            } else {
+                alert('Por favor, selecciona una imagen.');
+            }
+        });
+    </script>
+</body>
+</html>

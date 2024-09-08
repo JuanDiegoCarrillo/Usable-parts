@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesar Pago</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .message {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .message.success {
+            color: #4CAF50;
+        }
+        .message.error {
+            color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Procesar Pago</h1>
+        <div class="message">
+            <!-- Mensaje de éxito o error se mostrará aquí -->
+            <p id="message-text"></p>
+        </div>
+        <script>
+            function getQueryParams() {
+                const params = {};
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                for (const [key, value] of urlParams) {
+                    params[key] = value;
+                }
+                return params;
+            }
+
+            function procesarPago() {
+                const params = getQueryParams();
+
+                // Aquí puedes agregar la lógica real para procesar los datos.
+                // En este ejemplo, simplemente simulamos una respuesta exitosa.
+                const exito = true; // Cambia a `false` para simular un error
+
+                const messageElement = document.getElementById('message-text');
+                if (exito) {
+                    messageElement.textContent = '¡Pago procesado con éxito! Redirigiendo a la tienda...';
+                    messageElement.className = 'message success';
+
+                    // Redirigir a shop.html después de 2 segundos
+                    setTimeout(() => {
+                        window.location.href = 'shop.html';
+                    }, 2000);
+                } else {
+                    messageElement.textContent = 'Error al procesar el pago. Por favor, intente de nuevo.';
+                    messageElement.className = 'message error';
+                }
+            }
+
+            // Llamar a la función de procesamiento de pago al cargar la página
+            window.onload = procesarPago;
+        </script>
+    </div>
+</body>
+</html>
